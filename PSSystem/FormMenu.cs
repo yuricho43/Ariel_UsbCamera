@@ -70,11 +70,15 @@ namespace PSSystem
             Globals.ChangeForm((int)FORM_INDEX.NO_FORM_SET_WIFI);
         }
 
+        private void btnEvent_Click(object sender, EventArgs e)
+        {
+            Globals.ChangeForm((int)FORM_INDEX.NO_FORM_EVENT);
+        }
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             if (Globals.gCurrentIndex != (int)FORM_INDEX.NO_FORM_MAIN)
                 Globals.ChangeForm((int)FORM_INDEX.NO_FORM_MAIN);
         }
-
     }
 }

@@ -65,6 +65,7 @@ namespace PSSystem
             lblModelName.BackColor = Color.Transparent;
             label1.BackColor = Color.Transparent;
             lblDate.BackColor = Color.Transparent;
+            btnMenu.BackColor = Color.Transparent;
         }
 
 
@@ -74,8 +75,6 @@ namespace PSSystem
             lblDate.Visible = true;
             label1.Visible = true;
             btnMenu.Visible = true;
-            btnClose.Visible = true;
-            
         }
 
         static public void ShowControls()
@@ -91,6 +90,15 @@ namespace PSSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void timerTime_Tick(object sender, EventArgs e)
+        {
+            // display Time
+            if (lblDate.Visible)
+            {
+                lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+            }
         }
     }
 }

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             lblModelName = new Label();
-            btnClose = new Button();
             lblDate = new Label();
             label1 = new Label();
             btnMenu = new Button();
             panelMiddle = new Panel();
+            timerTime = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +43,6 @@
             // 
             panel1.BackColor = SystemColors.HighlightText;
             panel1.Controls.Add(lblModelName);
-            panel1.Controls.Add(btnClose);
             panel1.Controls.Add(lblDate);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnMenu);
@@ -65,28 +65,17 @@
             lblModelName.Text = "KENTC-23NP-P";
             lblModelName.Visible = false;
             // 
-            // btnClose
-            // 
-            btnClose.Location = new Point(740, 17);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(48, 26);
-            btnClose.TabIndex = 2;
-            btnClose.Text = "닫기";
-            btnClose.UseVisualStyleBackColor = true;
-            btnClose.Visible = false;
-            btnClose.Click += btnClose_Click;
-            // 
             // lblDate
             // 
             lblDate.AutoSize = true;
             lblDate.BackColor = SystemColors.Highlight;
             lblDate.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblDate.ForeColor = SystemColors.ButtonHighlight;
-            lblDate.Location = new Point(602, 20);
+            lblDate.Location = new Point(593, 24);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(132, 23);
+            lblDate.Size = new Size(160, 23);
             lblDate.TabIndex = 10;
-            lblDate.Text = "2023년 3월 17일";
+            lblDate.Text = "2023-03-06 12:00:00";
             lblDate.Visible = false;
             // 
             // label1
@@ -95,7 +84,7 @@
             label1.BackColor = SystemColors.Highlight;
             label1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(537, 20);
+            label1.Location = new Point(528, 24);
             label1.Name = "label1";
             label1.Size = new Size(53, 23);
             label1.TabIndex = 9;
@@ -122,6 +111,12 @@
             panelMiddle.Size = new Size(800, 536);
             panelMiddle.TabIndex = 2;
             // 
+            // timerTime
+            // 
+            timerTime.Enabled = true;
+            timerTime.Interval = 1000;
+            timerTime.Tick += timerTime_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,10 +139,10 @@
 
         private Panel panel1;
         private Panel panelMiddle;
-        private Button btnClose;
         private Button btnMenu;
         private Label lblDate;
         private Label label1;
         private Label lblModelName;
+        private System.Windows.Forms.Timer timerTime;
     }
 }

@@ -38,6 +38,7 @@
             btnData = new Button();
             btnState = new Button();
             btnHome = new Button();
+            btnEvent = new Button();
             SuspendLayout();
             // 
             // btnName
@@ -141,7 +142,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(721, 472);
+            btnHome.Location = new Point(714, 482);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 16;
@@ -150,11 +151,23 @@
             btnHome.UseVisualStyleBackColor = true;
             btnHome.Click += btnHome_Click;
             // 
+            // btnEvent
+            // 
+            btnEvent.FlatStyle = FlatStyle.Flat;
+            btnEvent.Location = new Point(516, 289);
+            btnEvent.Name = "btnEvent";
+            btnEvent.Size = new Size(168, 37);
+            btnEvent.TabIndex = 17;
+            btnEvent.Text = "10. 이벤트보기";
+            btnEvent.UseVisualStyleBackColor = true;
+            btnEvent.Click += btnEvent_Click;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 550);
+            Controls.Add(btnEvent);
             Controls.Add(btnHome);
             Controls.Add(btnWifi);
             Controls.Add(btnVideo);
@@ -184,5 +197,6 @@
         private Button btnData;
         private Button btnState;
         private Button btnHome;
+        private Button btnEvent;
     }
 }

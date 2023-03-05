@@ -130,7 +130,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(721, 472);
+            btnHome.Location = new Point(714, 482);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 15;
@@ -139,7 +139,7 @@
             btnHome.UseVisualStyleBackColor = true;
             btnHome.Click += btnHome_Click;
             // 
-            // FormVideo
+            // FormSetVideo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -155,7 +155,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "FormVideo";
+            Name = "FormSetVideo";
             Text = "FormD2";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

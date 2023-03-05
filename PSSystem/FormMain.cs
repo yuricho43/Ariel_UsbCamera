@@ -15,6 +15,18 @@ namespace PSSystem
         public FormMain()
         {
             InitializeComponent();
+
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            label4.BackColor = Color.Transparent;
+            label5.BackColor = Color.Transparent;
+            label6.BackColor = Color.Transparent;
+            lblArc.BackColor = Color.Transparent;
+            lblFire.BackColor = Color.Transparent;
+            lblVib.BackColor = Color.Transparent;
+            lblSound.BackColor = Color.Transparent;
+            lblTemp.BackColor = Color.Transparent;
         }
     }
 }

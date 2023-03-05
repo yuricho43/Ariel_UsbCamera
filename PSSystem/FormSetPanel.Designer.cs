@@ -44,7 +44,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(693, 441);
+            btnHome.Location = new Point(714, 482);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 17;
@@ -57,7 +57,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(784, 511);
+            ClientSize = new Size(800, 550);
             Controls.Add(btnHome);
             Controls.Add(label1);
             DoubleBuffered = true;

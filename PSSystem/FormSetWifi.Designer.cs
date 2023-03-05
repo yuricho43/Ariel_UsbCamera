@@ -34,7 +34,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(716, 482);
+            btnHome.Location = new Point(714, 482);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 21;

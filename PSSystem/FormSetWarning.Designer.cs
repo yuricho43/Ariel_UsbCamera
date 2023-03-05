@@ -34,7 +34,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(715, 493);
+            btnHome.Location = new Point(714, 482);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 19;
@@ -49,9 +49,9 @@
             label2.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(258, 37);
             label2.Name = "label2";
-            label2.Size = new Size(120, 37);
+            label2.Size = new Size(221, 37);
             label2.TabIndex = 18;
-            label2.Text = "경보 설정";
+            label2.Text = "1차 경보 상태 설정";
             // 
             // FormSetWarning
             // 

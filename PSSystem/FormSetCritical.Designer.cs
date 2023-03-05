@@ -34,7 +34,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(718, 487);
+            btnHome.Location = new Point(714, 482);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 21;
@@ -49,9 +49,9 @@
             label2.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(313, 43);
             label2.Name = "label2";
-            label2.Size = new Size(120, 37);
+            label2.Size = new Size(221, 37);
             label2.TabIndex = 20;
-            label2.Text = "사고 설정";
+            label2.Text = "2차 사고 상태 설정";
             // 
             // FormSetCritical
             // 
