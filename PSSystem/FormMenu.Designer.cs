@@ -28,35 +28,161 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            btnName = new Button();
+            btnWarning = new Button();
+            btnCritical = new Button();
+            btnSensor = new Button();
+            btnRelay = new Button();
+            btnWifi = new Button();
+            btnVideo = new Button();
+            btnData = new Button();
+            btnState = new Button();
+            btnHome = new Button();
+            SuspendLayout();
             // 
-            // label1
+            // btnName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "FormMenu";
+            btnName.FlatStyle = FlatStyle.Flat;
+            btnName.Location = new Point(51, 64);
+            btnName.Name = "btnName";
+            btnName.Size = new Size(168, 37);
+            btnName.TabIndex = 0;
+            btnName.Text = "1.배전반이름 설정";
+            btnName.UseVisualStyleBackColor = true;
+            btnName.Click += btnName_Click;
+            // 
+            // btnWarning
+            // 
+            btnWarning.FlatStyle = FlatStyle.Flat;
+            btnWarning.Location = new Point(51, 120);
+            btnWarning.Name = "btnWarning";
+            btnWarning.Size = new Size(168, 37);
+            btnWarning.TabIndex = 1;
+            btnWarning.Text = "2. 1차 경보 설정";
+            btnWarning.UseVisualStyleBackColor = true;
+            btnWarning.Click += btnWarning_Click;
+            // 
+            // btnCritical
+            // 
+            btnCritical.FlatStyle = FlatStyle.Flat;
+            btnCritical.Location = new Point(51, 174);
+            btnCritical.Name = "btnCritical";
+            btnCritical.Size = new Size(168, 37);
+            btnCritical.TabIndex = 2;
+            btnCritical.Text = "3. 2차 사고 설정";
+            btnCritical.UseVisualStyleBackColor = true;
+            btnCritical.Click += btnCritical_Click;
+            // 
+            // btnSensor
+            // 
+            btnSensor.FlatStyle = FlatStyle.Flat;
+            btnSensor.Location = new Point(51, 232);
+            btnSensor.Name = "btnSensor";
+            btnSensor.Size = new Size(168, 37);
+            btnSensor.TabIndex = 3;
+            btnSensor.Text = "4. 센서 확장 수 설정";
+            btnSensor.UseVisualStyleBackColor = true;
+            btnSensor.Click += btnSensor_Click;
+            // 
+            // btnRelay
+            // 
+            btnRelay.FlatStyle = FlatStyle.Flat;
+            btnRelay.Location = new Point(51, 289);
+            btnRelay.Name = "btnRelay";
+            btnRelay.Size = new Size(168, 37);
+            btnRelay.TabIndex = 4;
+            btnRelay.Text = "5. 릴레이 접점 테스트";
+            btnRelay.UseVisualStyleBackColor = true;
+            btnRelay.Click += btnRelay_Click;
+            // 
+            // btnWifi
+            // 
+            btnWifi.FlatStyle = FlatStyle.Flat;
+            btnWifi.Location = new Point(516, 232);
+            btnWifi.Name = "btnWifi";
+            btnWifi.Size = new Size(168, 37);
+            btnWifi.TabIndex = 8;
+            btnWifi.Text = "9. WIFI ID, PS 설정";
+            btnWifi.UseVisualStyleBackColor = true;
+            btnWifi.Click += btnWifi_Click;
+            // 
+            // btnVideo
+            // 
+            btnVideo.FlatStyle = FlatStyle.Flat;
+            btnVideo.Location = new Point(516, 174);
+            btnVideo.Name = "btnVideo";
+            btnVideo.Size = new Size(168, 37);
+            btnVideo.TabIndex = 7;
+            btnVideo.Text = "8. 영상 검색";
+            btnVideo.UseVisualStyleBackColor = true;
+            btnVideo.Click += btnVideo_Click;
+            // 
+            // btnData
+            // 
+            btnData.FlatStyle = FlatStyle.Flat;
+            btnData.Location = new Point(516, 120);
+            btnData.Name = "btnData";
+            btnData.Size = new Size(168, 37);
+            btnData.TabIndex = 6;
+            btnData.Text = "7. 저장 데이타 검색";
+            btnData.UseVisualStyleBackColor = true;
+            btnData.Click += btnData_Click;
+            // 
+            // btnState
+            // 
+            btnState.FlatStyle = FlatStyle.Flat;
+            btnState.Location = new Point(516, 64);
+            btnState.Name = "btnState";
+            btnState.Size = new Size(168, 37);
+            btnState.TabIndex = 5;
+            btnState.Text = "6. 상태 검색";
+            btnState.UseVisualStyleBackColor = true;
+            btnState.Click += btnState_Click;
+            // 
+            // btnHome
+            // 
+            btnHome.Location = new Point(721, 472);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(63, 45);
+            btnHome.TabIndex = 16;
+            btnHome.TabStop = false;
+            btnHome.Text = "Home";
+            btnHome.UseVisualStyleBackColor = true;
+            btnHome.Click += btnHome_Click;
             // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 536);
-            this.Controls.Add(this.label1);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMenu";
-            this.Text = "FormMenu";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 550);
+            Controls.Add(btnHome);
+            Controls.Add(btnWifi);
+            Controls.Add(btnVideo);
+            Controls.Add(btnData);
+            Controls.Add(btnState);
+            Controls.Add(btnRelay);
+            Controls.Add(btnSensor);
+            Controls.Add(btnCritical);
+            Controls.Add(btnWarning);
+            Controls.Add(btnName);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FormMenu";
+            Text = "FormMenu";
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private Label label1;
+        private Button btnName;
+        private Button btnWarning;
+        private Button btnCritical;
+        private Button btnSensor;
+        private Button btnRelay;
+        private Button btnWifi;
+        private Button btnVideo;
+        private Button btnData;
+        private Button btnState;
+        private Button btnHome;
     }
 }

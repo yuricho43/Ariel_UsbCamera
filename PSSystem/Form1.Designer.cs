@@ -28,167 +28,126 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCam4 = new System.Windows.Forms.Button();
-            this.btnCam3 = new System.Windows.Forms.Button();
-            this.btnCam2 = new System.Windows.Forms.Button();
-            this.btnCam1 = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrev = new System.Windows.Forms.Button();
-            this.btnB = new System.Windows.Forms.Button();
-            this.btnA = new System.Windows.Forms.Button();
-            this.btnMain = new System.Windows.Forms.Button();
-            this.panelMiddle = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            lblModelName = new Label();
+            btnClose = new Button();
+            lblDate = new Label();
+            label1 = new Label();
+            btnMenu = new Button();
+            panelMiddle = new Panel();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panel1.Controls.Add(this.btnCam4);
-            this.panel1.Controls.Add(this.btnCam3);
-            this.panel1.Controls.Add(this.btnCam2);
-            this.panel1.Controls.Add(this.btnCam1);
-            this.panel1.Controls.Add(this.btnNext);
-            this.panel1.Controls.Add(this.btnPrev);
-            this.panel1.Controls.Add(this.btnB);
-            this.panel1.Controls.Add(this.btnA);
-            this.panel1.Controls.Add(this.btnMain);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 64);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = SystemColors.HighlightText;
+            panel1.Controls.Add(lblModelName);
+            panel1.Controls.Add(btnClose);
+            panel1.Controls.Add(lblDate);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btnMenu);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 64);
+            panel1.TabIndex = 0;
             // 
-            // btnCam4
+            // lblModelName
             // 
-            this.btnCam4.Location = new System.Drawing.Point(144, 35);
-            this.btnCam4.Name = "btnCam4";
-            this.btnCam4.Size = new System.Drawing.Size(75, 23);
-            this.btnCam4.TabIndex = 8;
-            this.btnCam4.Text = "Cam4";
-            this.btnCam4.UseVisualStyleBackColor = true;
-            this.btnCam4.Click += new System.EventHandler(this.btnCam4_Click);
+            lblModelName.AutoSize = true;
+            lblModelName.BackColor = SystemColors.Highlight;
+            lblModelName.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            lblModelName.ForeColor = SystemColors.ButtonHighlight;
+            lblModelName.Location = new Point(12, 12);
+            lblModelName.Name = "lblModelName";
+            lblModelName.Size = new Size(211, 37);
+            lblModelName.TabIndex = 11;
+            lblModelName.Text = "KENTC-23NP-P";
+            lblModelName.Visible = false;
             // 
-            // btnCam3
+            // btnClose
             // 
-            this.btnCam3.Location = new System.Drawing.Point(144, 9);
-            this.btnCam3.Name = "btnCam3";
-            this.btnCam3.Size = new System.Drawing.Size(75, 23);
-            this.btnCam3.TabIndex = 7;
-            this.btnCam3.Text = "Cam3";
-            this.btnCam3.UseVisualStyleBackColor = true;
-            this.btnCam3.Click += new System.EventHandler(this.btnCam3_Click);
+            btnClose.Location = new Point(740, 17);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(48, 26);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "닫기";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Visible = false;
+            btnClose.Click += btnClose_Click;
             // 
-            // btnCam2
+            // lblDate
             // 
-            this.btnCam2.Location = new System.Drawing.Point(12, 38);
-            this.btnCam2.Name = "btnCam2";
-            this.btnCam2.Size = new System.Drawing.Size(75, 23);
-            this.btnCam2.TabIndex = 6;
-            this.btnCam2.Text = "Cam2";
-            this.btnCam2.UseVisualStyleBackColor = true;
-            this.btnCam2.Click += new System.EventHandler(this.btnCam2_Click);
+            lblDate.AutoSize = true;
+            lblDate.BackColor = SystemColors.Highlight;
+            lblDate.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDate.ForeColor = SystemColors.ButtonHighlight;
+            lblDate.Location = new Point(602, 20);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(132, 23);
+            lblDate.TabIndex = 10;
+            lblDate.Text = "2023년 3월 17일";
+            lblDate.Visible = false;
             // 
-            // btnCam1
+            // label1
             // 
-            this.btnCam1.Location = new System.Drawing.Point(12, 9);
-            this.btnCam1.Name = "btnCam1";
-            this.btnCam1.Size = new System.Drawing.Size(75, 23);
-            this.btnCam1.TabIndex = 5;
-            this.btnCam1.Text = "Cam1";
-            this.btnCam1.UseVisualStyleBackColor = true;
-            this.btnCam1.Click += new System.EventHandler(this.btnCam1_Click);
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.Highlight;
+            label1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(537, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(53, 23);
+            label1.TabIndex = 9;
+            label1.Text = "날짜 :";
+            label1.Visible = false;
             // 
-            // btnNext
+            // btnMenu
             // 
-            this.btnNext.Location = new System.Drawing.Point(363, 19);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 32);
-            this.btnNext.TabIndex = 4;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnPrev
-            // 
-            this.btnPrev.Location = new System.Drawing.Point(249, 19);
-            this.btnPrev.Name = "btnPrev";
-            this.btnPrev.Size = new System.Drawing.Size(75, 32);
-            this.btnPrev.TabIndex = 3;
-            this.btnPrev.Text = "Prev";
-            this.btnPrev.UseVisualStyleBackColor = true;
-            this.btnPrev.Click += new System.EventHandler(this.btnPrev_Click);
-            // 
-            // btnB
-            // 
-            this.btnB.Location = new System.Drawing.Point(699, 19);
-            this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(75, 32);
-            this.btnB.TabIndex = 2;
-            this.btnB.Text = "To B";
-            this.btnB.UseVisualStyleBackColor = true;
-            this.btnB.Click += new System.EventHandler(this.btnB_Click);
-            // 
-            // btnA
-            // 
-            this.btnA.Location = new System.Drawing.Point(604, 19);
-            this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(75, 32);
-            this.btnA.TabIndex = 1;
-            this.btnA.Text = "To A";
-            this.btnA.UseVisualStyleBackColor = true;
-            this.btnA.Click += new System.EventHandler(this.btnA_Click);
-            // 
-            // btnMain
-            // 
-            this.btnMain.Location = new System.Drawing.Point(512, 19);
-            this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(75, 32);
-            this.btnMain.TabIndex = 0;
-            this.btnMain.Text = "To MAIN";
-            this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.btnMain_Click);
+            btnMenu.Location = new Point(373, 20);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(75, 29);
+            btnMenu.TabIndex = 0;
+            btnMenu.Text = "설정";
+            btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.Visible = false;
+            btnMenu.Click += btnMenu_Click;
             // 
             // panelMiddle
             // 
-            this.panelMiddle.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panelMiddle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMiddle.Location = new System.Drawing.Point(0, 64);
-            this.panelMiddle.Name = "panelMiddle";
-            this.panelMiddle.Size = new System.Drawing.Size(800, 536);
-            this.panelMiddle.TabIndex = 2;
+            panelMiddle.BackColor = SystemColors.ScrollBar;
+            panelMiddle.Dock = DockStyle.Fill;
+            panelMiddle.Location = new Point(0, 64);
+            panelMiddle.Name = "panelMiddle";
+            panelMiddle.Size = new Size(800, 536);
+            panelMiddle.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.panelMiddle);
-            this.Controls.Add(this.panel1);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PSSystem";
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 600);
+            Controls.Add(panelMiddle);
+            Controls.Add(panel1);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "PSSystem";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
         private Panel panelMiddle;
-        private Button btnB;
-        private Button btnA;
-        private Button btnMain;
-        private Button btnNext;
-        private Button btnPrev;
-        private Button btnCam2;
-        private Button btnCam1;
-        private Button btnCam4;
-        private Button btnCam3;
+        private Button btnClose;
+        private Button btnMenu;
+        private Label lblDate;
+        private Label label1;
+        private Label lblModelName;
     }
 }

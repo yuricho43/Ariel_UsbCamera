@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace PSSystem
 {
-    public partial class FormC : Form
+    public partial class FormSetWarning : Form
     {
-        public FormC()
+        public FormSetWarning()
         {
             InitializeComponent();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (Globals.gCurrentIndex != (int)FORM_INDEX.NO_FORM_MAIN)
+                Globals.ChangeForm((int)FORM_INDEX.NO_FORM_MAIN);
+
         }
     }
 }

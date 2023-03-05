@@ -28,34 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            label1 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MAIN Form";
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(306, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(168, 37);
+            label1.TabIndex = 17;
+            label1.Text = "동작상태 보기";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlLightLight;
+            label4.Location = new Point(158, 251);
+            label4.Name = "label4";
+            label4.Size = new Size(239, 45);
+            label4.TabIndex = 20;
+            label4.Text = "진동: 이상없음.";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(158, 191);
+            label3.Name = "label3";
+            label3.Size = new Size(250, 45);
+            label3.TabIndex = 19;
+            label3.Text = "화재 : 이상없음.";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(158, 131);
+            label2.Name = "label2";
+            label2.Size = new Size(250, 45);
+            label2.TabIndex = 18;
+            label2.Text = "아크 : 이상없음.";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ControlLightLight;
+            label5.Location = new Point(158, 311);
+            label5.Name = "label5";
+            label5.Size = new Size(250, 45);
+            label5.TabIndex = 21;
+            label5.Text = "음파 : 이상없음.";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ControlLightLight;
+            label6.Location = new Point(158, 371);
+            label6.Name = "label6";
+            label6.Size = new Size(184, 45);
+            label6.TabIndex = 22;
+            label6.Text = "온도 : 25도";
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 536);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMain";
-            this.Text = "FormMain";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 550);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FormMain";
+            Text = "FormMain";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
+        private Button btnHome;
         private Label label1;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label5;
+        private Label label6;
     }
 }

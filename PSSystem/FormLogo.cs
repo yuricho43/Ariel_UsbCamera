@@ -15,26 +15,17 @@ namespace PSSystem
         public FormLogo()
         {
             InitializeComponent();
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            label4.BackColor = Color.Transparent;
         }
 
-        public void ShowImage(Bitmap image, int pictureIndex)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            if (pictureIndex == 0)
-            {
-                pictureBox1.Image = image;
-            }
-            else if (pictureIndex == 1)
-            {
-                pictureBox2.Image = image;
-            }
-            else if (pictureIndex == 2)
-            {
-                pictureBox3.Image = image;
-            }
-            else if (pictureIndex == 3)
-            {
-                pictureBox4.Image = image;
-            }
+            timer1.Enabled = false;
+            Globals.ChangeForm((int)FORM_INDEX.NO_FORM_MAIN);
+            Form1.ShowControls();
         }
     }
 }

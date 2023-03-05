@@ -28,77 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            SuspendLayout();
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(8, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(390, 250);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("맑은 고딕", 36F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(71, 110);
+            label1.Name = "label1";
+            label1.Size = new Size(699, 65);
+            label1.TabIndex = 0;
+            label1.Text = "Photoelectric Sensing System";
             // 
-            // pictureBox2
+            // label2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(401, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(390, 250);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            label2.AutoSize = true;
+            label2.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(231, 205);
+            label2.Name = "label2";
+            label2.Size = new Size(303, 45);
+            label2.TabIndex = 1;
+            label2.Text = "제품: KENTC-23NP";
             // 
-            // pictureBox3
+            // label3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(8, 266);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(390, 250);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            label3.AutoSize = true;
+            label3.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(231, 264);
+            label3.Name = "label3";
+            label3.Size = new Size(334, 45);
+            label3.TabIndex = 2;
+            label3.Text = "센서: KENTC-23NP-S";
             // 
-            // pictureBox4
+            // label4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(401, 266);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(390, 250);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
+            label4.AutoSize = true;
+            label4.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlLightLight;
+            label4.Location = new Point(231, 323);
+            label4.Name = "label4";
+            label4.Size = new Size(336, 45);
+            label4.TabIndex = 3;
+            label4.Text = "판넬: KENTC-23NP-P";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick;
             // 
             // FormLogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 536);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormLogo";
-            this.Text = "FormLogo";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 550);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FormLogo";
+            Text = "FormLogo";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
+
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private System.Windows.Forms.Timer timer1;
     }
 }

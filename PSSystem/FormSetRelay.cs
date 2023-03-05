@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace PSSystem
 {
-    public partial class FormA2 : Form
+    public partial class FormSetRelay : Form
     {
-        public FormA2()
+        public FormSetRelay()
         {
             InitializeComponent();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (Globals.gCurrentIndex != (int)FORM_INDEX.NO_FORM_MAIN)
+                Globals.ChangeForm((int)FORM_INDEX.NO_FORM_MAIN);
         }
     }
 }
