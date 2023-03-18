@@ -39,10 +39,12 @@
             label1 = new Label();
             btnHome = new Button();
             btnNext = new Button();
+            pictureBox5 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // pictureBox4
@@ -93,7 +95,7 @@
             // 
             // btnCam2
             // 
-            btnCam2.Location = new Point(713, 60);
+            btnCam2.Location = new Point(705, 60);
             btnCam2.Name = "btnCam2";
             btnCam2.Size = new Size(75, 23);
             btnCam2.TabIndex = 11;
@@ -103,7 +105,7 @@
             // 
             // btnCam3
             // 
-            btnCam3.Location = new Point(4, 247);
+            btnCam3.Location = new Point(12, 247);
             btnCam3.Name = "btnCam3";
             btnCam3.Size = new Size(75, 23);
             btnCam3.TabIndex = 12;
@@ -125,11 +127,12 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(4, 359);
+            label1.Location = new Point(12, 362);
             label1.Name = "label1";
-            label1.Size = new Size(65, 37);
+            label1.Size = new Size(113, 37);
             label1.TabIndex = 14;
-            label1.Text = "영상";
+            label1.Text = "영상보기";
+            label1.Click += label1_Click;
             // 
             // btnHome
             // 
@@ -144,13 +147,21 @@
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(94, 370);
+            btnNext.Location = new Point(148, 370);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(75, 23);
             btnNext.TabIndex = 16;
             btnNext.Text = "Next  Cam";
             btnNext.UseVisualStyleBackColor = true;
             btnNext.Click += btnNext_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Location = new Point(4, 9);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(792, 347);
+            pictureBox5.TabIndex = 17;
+            pictureBox5.TabStop = false;
             // 
             // FormSetVideo
             // 
@@ -168,14 +179,17 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(pictureBox5);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormSetVideo";
             Text = "FormD2";
             FormClosed += FormSetVideo_FormClosed;
+            Shown += FormSetVideo_Shown;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,5 +207,6 @@
         private Label label1;
         private Button btnHome;
         private Button btnNext;
+        private PictureBox pictureBox5;
     }
 }
