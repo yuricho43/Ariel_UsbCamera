@@ -46,43 +46,43 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(400, 263);
+            pictureBox4.Location = new Point(396, 181);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(390, 200);
+            pictureBox4.Size = new Size(300, 170);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 9;
             pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.Location = new Point(7, 263);
+            pictureBox3.Location = new Point(94, 181);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(390, 200);
+            pictureBox3.Size = new Size(300, 170);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(400, 57);
+            pictureBox2.Location = new Point(396, 9);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(390, 200);
+            pictureBox2.Size = new Size(300, 170);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(7, 57);
+            pictureBox1.Location = new Point(94, 9);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(390, 200);
+            pictureBox1.Size = new Size(300, 170);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
             // btnCam1
             // 
-            btnCam1.Location = new Point(21, 23);
+            btnCam1.Location = new Point(12, 60);
             btnCam1.Name = "btnCam1";
             btnCam1.Size = new Size(75, 23);
             btnCam1.TabIndex = 10;
@@ -92,7 +92,7 @@
             // 
             // btnCam2
             // 
-            btnCam2.Location = new Point(198, 23);
+            btnCam2.Location = new Point(713, 60);
             btnCam2.Name = "btnCam2";
             btnCam2.Size = new Size(75, 23);
             btnCam2.TabIndex = 11;
@@ -102,35 +102,37 @@
             // 
             // btnCam3
             // 
-            btnCam3.Location = new Point(510, 23);
+            btnCam3.Location = new Point(4, 247);
             btnCam3.Name = "btnCam3";
             btnCam3.Size = new Size(75, 23);
             btnCam3.TabIndex = 12;
             btnCam3.Text = "카메라3";
             btnCam3.UseVisualStyleBackColor = true;
+            btnCam3.Click += btnCam3_Click;
             // 
             // btnCam4
             // 
-            btnCam4.Location = new Point(681, 23);
+            btnCam4.Location = new Point(705, 247);
             btnCam4.Name = "btnCam4";
             btnCam4.Size = new Size(75, 23);
             btnCam4.TabIndex = 13;
             btnCam4.Text = "카메라4";
             btnCam4.UseVisualStyleBackColor = true;
+            btnCam4.Click += btnCam4_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(337, 9);
+            label1.Location = new Point(4, 359);
             label1.Name = "label1";
-            label1.Size = new Size(113, 37);
+            label1.Size = new Size(65, 37);
             label1.TabIndex = 14;
-            label1.Text = "영상검색";
+            label1.Text = "영상";
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(714, 482);
+            btnHome.Location = new Point(725, 359);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 15;
@@ -143,7 +145,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 550);
+            ClientSize = new Size(800, 416);
             Controls.Add(btnHome);
             Controls.Add(label1);
             Controls.Add(btnCam4);

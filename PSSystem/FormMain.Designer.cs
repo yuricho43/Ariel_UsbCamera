@@ -45,7 +45,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(306, 21);
+            label1.Location = new Point(305, 9);
             label1.Name = "label1";
             label1.Size = new Size(168, 37);
             label1.TabIndex = 17;
@@ -56,7 +56,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(158, 251);
+            label4.Location = new Point(245, 184);
             label4.Name = "label4";
             label4.Size = new Size(103, 45);
             label4.TabIndex = 20;
@@ -67,7 +67,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(158, 191);
+            label3.Location = new Point(245, 124);
             label3.Name = "label3";
             label3.Size = new Size(114, 45);
             label3.TabIndex = 19;
@@ -78,7 +78,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(158, 131);
+            label2.Location = new Point(245, 64);
             label2.Name = "label2";
             label2.Size = new Size(103, 45);
             label2.TabIndex = 18;
@@ -89,7 +89,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(158, 311);
+            label5.Location = new Point(245, 244);
             label5.Name = "label5";
             label5.Size = new Size(114, 45);
             label5.TabIndex = 21;
@@ -100,7 +100,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(158, 371);
+            label6.Location = new Point(245, 304);
             label6.Name = "label6";
             label6.Size = new Size(114, 45);
             label6.TabIndex = 22;
@@ -111,7 +111,7 @@
             lblTemp.AutoSize = true;
             lblTemp.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblTemp.ForeColor = SystemColors.ControlLightLight;
-            lblTemp.Location = new Point(265, 371);
+            lblTemp.Location = new Point(417, 304);
             lblTemp.Name = "lblTemp";
             lblTemp.Size = new Size(90, 45);
             lblTemp.TabIndex = 27;
@@ -122,7 +122,7 @@
             lblSound.AutoSize = true;
             lblSound.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblSound.ForeColor = SystemColors.ControlLightLight;
-            lblSound.Location = new Point(265, 311);
+            lblSound.Location = new Point(417, 244);
             lblSound.Name = "lblSound";
             lblSound.Size = new Size(148, 45);
             lblSound.TabIndex = 26;
@@ -133,7 +133,7 @@
             lblVib.AutoSize = true;
             lblVib.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblVib.ForeColor = SystemColors.ControlLightLight;
-            lblVib.Location = new Point(265, 251);
+            lblVib.Location = new Point(417, 184);
             lblVib.Name = "lblVib";
             lblVib.Size = new Size(148, 45);
             lblVib.TabIndex = 25;
@@ -144,7 +144,7 @@
             lblFire.AutoSize = true;
             lblFire.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblFire.ForeColor = SystemColors.ControlLightLight;
-            lblFire.Location = new Point(265, 191);
+            lblFire.Location = new Point(417, 124);
             lblFire.Name = "lblFire";
             lblFire.Size = new Size(148, 45);
             lblFire.TabIndex = 24;
@@ -155,7 +155,7 @@
             lblArc.AutoSize = true;
             lblArc.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblArc.ForeColor = SystemColors.ControlLightLight;
-            lblArc.Location = new Point(265, 131);
+            lblArc.Location = new Point(417, 64);
             lblArc.Name = "lblArc";
             lblArc.Size = new Size(148, 45);
             lblArc.TabIndex = 23;
@@ -165,7 +165,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 550);
+            ClientSize = new Size(800, 416);
             Controls.Add(lblTemp);
             Controls.Add(lblSound);
             Controls.Add(lblVib);

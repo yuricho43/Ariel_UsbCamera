@@ -34,7 +34,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(714, 482);
+            btnHome.Location = new Point(725, 359);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 25;
@@ -47,7 +47,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(295, 59);
+            label2.Location = new Point(276, 20);
             label2.Name = "label2";
             label2.Size = new Size(223, 37);
             label2.TabIndex = 24;
@@ -57,7 +57,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 550);
+            ClientSize = new Size(800, 416);
             Controls.Add(btnHome);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;

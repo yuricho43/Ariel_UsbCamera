@@ -69,11 +69,11 @@
             // 
             lblDate.AutoSize = true;
             lblDate.BackColor = SystemColors.Highlight;
-            lblDate.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDate.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lblDate.ForeColor = SystemColors.ButtonHighlight;
-            lblDate.Location = new Point(593, 24);
+            lblDate.Location = new Point(590, 18);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(160, 23);
+            lblDate.Size = new Size(200, 29);
             lblDate.TabIndex = 10;
             lblDate.Text = "2023-03-06 12:00:00";
             lblDate.Visible = false;
@@ -82,20 +82,20 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Highlight;
-            label1.Font = new Font("Arial Narrow", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(528, 24);
+            label1.Location = new Point(525, 18);
             label1.Name = "label1";
-            label1.Size = new Size(53, 23);
+            label1.Size = new Size(63, 29);
             label1.TabIndex = 9;
             label1.Text = "날짜 :";
             label1.Visible = false;
             // 
             // btnMenu
             // 
-            btnMenu.Location = new Point(373, 20);
+            btnMenu.Location = new Point(323, 12);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(75, 29);
+            btnMenu.Size = new Size(125, 37);
             btnMenu.TabIndex = 0;
             btnMenu.Text = "설정";
             btnMenu.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             panelMiddle.Dock = DockStyle.Fill;
             panelMiddle.Location = new Point(0, 64);
             panelMiddle.Name = "panelMiddle";
-            panelMiddle.Size = new Size(800, 536);
+            panelMiddle.Size = new Size(800, 416);
             panelMiddle.TabIndex = 2;
             // 
             // timerTime
@@ -122,7 +122,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 600);
+            ClientSize = new Size(800, 480);
             Controls.Add(panelMiddle);
             Controls.Add(panel1);
             DoubleBuffered = true;

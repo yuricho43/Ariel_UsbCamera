@@ -22,5 +22,10 @@ namespace PSSystem
             if (Globals.gCurrentIndex != (int)FORM_INDEX.NO_FORM_MAIN)
                 Globals.ChangeForm((int)FORM_INDEX.NO_FORM_MAIN);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

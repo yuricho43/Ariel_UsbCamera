@@ -13,9 +13,15 @@ namespace PSSystem
 {
     public partial class FormSetVideo : Form
     {
+        Button[] CameraButton = new Button[4];
+
         public FormSetVideo()
         {
             InitializeComponent();
+            CameraButton[0] = btnCam1;
+            CameraButton[1] = btnCam2;
+            CameraButton[2] = btnCam3;
+            CameraButton[3] = btnCam4;
         }
 
         private void ShowImage(Bitmap image, int pictureIndex)
@@ -38,7 +44,7 @@ namespace PSSystem
             }
         }
 
-        private void CameraCallback()
+        private void CameraCallback0()
         {
             Globals.gFrame[0] = new Mat();
             Globals.gVideoList[0] = new VideoCapture(0, VideoCaptureAPIs.DSHOW);
@@ -47,7 +53,6 @@ namespace PSSystem
 
                 Globals.gVideoList[0].Read(Globals.gFrame[0]);
                 ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[0]), 0);
-                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[0]), 2);
 
             }
         }
@@ -60,8 +65,31 @@ namespace PSSystem
             {
                 Globals.gVideoList[1].Read(Globals.gFrame[1]);
                 ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[1]), 1);
-                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[1]), 3);
 
+            }
+        }
+
+        private void CameraCallback2()
+        {
+            Globals.gFrame[2] = new Mat();
+            Globals.gVideoList[2] = new VideoCapture(2, VideoCaptureAPIs.DSHOW);
+
+            while (true)
+            {
+                Globals.gVideoList[2].Read(Globals.gFrame[2]);
+                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[2]), 2);
+            }
+        }
+
+        private void CameraCallback3()
+        {
+            Globals.gFrame[3] = new Mat();
+            Globals.gVideoList[3] = new VideoCapture(3, VideoCaptureAPIs.DSHOW);
+
+            while (true)
+            {
+                Globals.gVideoList[3].Read(Globals.gFrame[3]);
+                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[3]), 3);
             }
         }
 
@@ -76,7 +104,7 @@ namespace PSSystem
             }
 
             btnCam1.Text = "Stop1";
-            Globals.gThread[0] = new Thread(new ThreadStart(CameraCallback));
+            Globals.gThread[0] = new Thread(new ThreadStart(CameraCallback0));
             Globals.gThread[0].Start();
 
         }
@@ -95,6 +123,54 @@ namespace PSSystem
             Globals.gThread[1] = new Thread(new ThreadStart(CameraCallback1));
             Globals.gThread[1].Start();
 
+        }
+
+        private void btnCam3_Click(object sender, EventArgs e)
+        {
+            if (Globals.gVideoList[2] != null)
+            {
+                StopCamera(2);
+                return;
+            }
+
+            StartCamera(2);
+        }
+
+        private void btnCam4_Click(object sender, EventArgs e)
+        {
+            if (Globals.gVideoList[3] != null)
+            {
+                StopCamera(3);
+                return;
+            }
+
+            StartCamera(3);
+        }
+
+        private void StartCamera(int index)
+        {
+
+            if (index == 0)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback0));
+            else if (index == 1)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback1));
+            else if (index == 2)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback2));
+            else if (index == 3)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback3));
+            else
+                return;
+
+            Globals.gThread[index].Start();
+            CameraButton[index].Text = "Stop";
+        }
+
+        private void StopCamera(int index)
+        {
+            Globals.gThread[index].Abort();
+            Globals.gVideoList[index].Release();
+            Globals.gFrame[index].Release();
+            CameraButton[index].Text = "Start";
         }
 
         private void btnHome_Click(object sender, EventArgs e)

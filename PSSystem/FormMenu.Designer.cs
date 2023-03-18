@@ -44,7 +44,7 @@
             // btnName
             // 
             btnName.FlatStyle = FlatStyle.Flat;
-            btnName.Location = new Point(51, 64);
+            btnName.Location = new Point(156, 26);
             btnName.Name = "btnName";
             btnName.Size = new Size(168, 37);
             btnName.TabIndex = 0;
@@ -55,7 +55,7 @@
             // btnWarning
             // 
             btnWarning.FlatStyle = FlatStyle.Flat;
-            btnWarning.Location = new Point(51, 120);
+            btnWarning.Location = new Point(156, 82);
             btnWarning.Name = "btnWarning";
             btnWarning.Size = new Size(168, 37);
             btnWarning.TabIndex = 1;
@@ -66,7 +66,7 @@
             // btnCritical
             // 
             btnCritical.FlatStyle = FlatStyle.Flat;
-            btnCritical.Location = new Point(51, 174);
+            btnCritical.Location = new Point(156, 136);
             btnCritical.Name = "btnCritical";
             btnCritical.Size = new Size(168, 37);
             btnCritical.TabIndex = 2;
@@ -77,7 +77,7 @@
             // btnSensor
             // 
             btnSensor.FlatStyle = FlatStyle.Flat;
-            btnSensor.Location = new Point(51, 232);
+            btnSensor.Location = new Point(156, 194);
             btnSensor.Name = "btnSensor";
             btnSensor.Size = new Size(168, 37);
             btnSensor.TabIndex = 3;
@@ -88,7 +88,7 @@
             // btnRelay
             // 
             btnRelay.FlatStyle = FlatStyle.Flat;
-            btnRelay.Location = new Point(51, 289);
+            btnRelay.Location = new Point(156, 251);
             btnRelay.Name = "btnRelay";
             btnRelay.Size = new Size(168, 37);
             btnRelay.TabIndex = 4;
@@ -99,7 +99,7 @@
             // btnWifi
             // 
             btnWifi.FlatStyle = FlatStyle.Flat;
-            btnWifi.Location = new Point(516, 232);
+            btnWifi.Location = new Point(458, 194);
             btnWifi.Name = "btnWifi";
             btnWifi.Size = new Size(168, 37);
             btnWifi.TabIndex = 8;
@@ -110,7 +110,7 @@
             // btnVideo
             // 
             btnVideo.FlatStyle = FlatStyle.Flat;
-            btnVideo.Location = new Point(516, 174);
+            btnVideo.Location = new Point(458, 136);
             btnVideo.Name = "btnVideo";
             btnVideo.Size = new Size(168, 37);
             btnVideo.TabIndex = 7;
@@ -121,7 +121,7 @@
             // btnData
             // 
             btnData.FlatStyle = FlatStyle.Flat;
-            btnData.Location = new Point(516, 120);
+            btnData.Location = new Point(458, 82);
             btnData.Name = "btnData";
             btnData.Size = new Size(168, 37);
             btnData.TabIndex = 6;
@@ -132,7 +132,7 @@
             // btnState
             // 
             btnState.FlatStyle = FlatStyle.Flat;
-            btnState.Location = new Point(516, 64);
+            btnState.Location = new Point(458, 26);
             btnState.Name = "btnState";
             btnState.Size = new Size(168, 37);
             btnState.TabIndex = 5;
@@ -142,7 +142,7 @@
             // 
             // btnHome
             // 
-            btnHome.Location = new Point(714, 482);
+            btnHome.Location = new Point(725, 359);
             btnHome.Name = "btnHome";
             btnHome.Size = new Size(63, 45);
             btnHome.TabIndex = 16;
@@ -154,7 +154,7 @@
             // btnEvent
             // 
             btnEvent.FlatStyle = FlatStyle.Flat;
-            btnEvent.Location = new Point(516, 289);
+            btnEvent.Location = new Point(458, 251);
             btnEvent.Name = "btnEvent";
             btnEvent.Size = new Size(168, 37);
             btnEvent.TabIndex = 17;
@@ -166,7 +166,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 550);
+            ClientSize = new Size(800, 416);
             Controls.Add(btnEvent);
             Controls.Add(btnHome);
             Controls.Add(btnWifi);

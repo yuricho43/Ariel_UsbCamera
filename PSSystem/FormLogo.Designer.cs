@@ -41,7 +41,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("맑은 고딕", 36F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(71, 110);
+            label1.Location = new Point(53, 9);
             label1.Name = "label1";
             label1.Size = new Size(699, 65);
             label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(231, 205);
+            label2.Location = new Point(213, 104);
             label2.Name = "label2";
             label2.Size = new Size(303, 45);
             label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(231, 264);
+            label3.Location = new Point(213, 163);
             label3.Name = "label3";
             label3.Size = new Size(334, 45);
             label3.TabIndex = 2;
@@ -74,7 +74,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(231, 323);
+            label4.Location = new Point(213, 222);
             label4.Name = "label4";
             label4.Size = new Size(336, 45);
             label4.TabIndex = 3;
@@ -91,7 +91,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(800, 550);
+            ClientSize = new Size(800, 416);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
