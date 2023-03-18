@@ -100,5 +100,10 @@ namespace PSSystem
                 lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Globals.gFormList[(int)FORM_INDEX.NO_FORM_SET_VIDEO].Close();
+        }
     }
 }

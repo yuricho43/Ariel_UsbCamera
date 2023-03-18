@@ -19,6 +19,7 @@ namespace PSSystem
         public static Mat[] gFrame = new Mat[MAX_COUNT];
         public static VideoCapture[] gVideoList = new VideoCapture[MAX_CAMERA];
         public static Thread[] gThread = new Thread[MAX_CAMERA];
+        public static int[] gIsAlive = new int[MAX_CAMERA];
         public static string[] gDevices = UsbCamera.FindDevices();
         public static int gNumCam = 0;
 

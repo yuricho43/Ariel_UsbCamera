@@ -1,4 +1,5 @@
 ﻿using OpenCvSharp;
+using OpenCvSharp.Flann;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace PSSystem
     public partial class FormSetVideo : Form
     {
         Button[] CameraButton = new Button[4];
+        int CurrentCam = -1;
 
         public FormSetVideo()
         {
@@ -46,83 +48,147 @@ namespace PSSystem
 
         private void CameraCallback0()
         {
-            Globals.gFrame[0] = new Mat();
-            Globals.gVideoList[0] = new VideoCapture(0, VideoCaptureAPIs.DSHOW);
-            while (true)
+            int ix = 0;
+            Globals.gFrame[ix] = new Mat();
+            Globals.gVideoList[ix] = new VideoCapture(ix, VideoCaptureAPIs.DSHOW);
+
+            if (!Globals.gVideoList[ix].IsOpened())
             {
-
-                Globals.gVideoList[0].Read(Globals.gFrame[0]);
-                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[0]), 0);
-
+                MessageBox.Show("첫번째 카메라를 열 수 없습니다. 연결 확인해 주세요");
+                return;
             }
+
+            Globals.gIsAlive[ix] = 1;
+            while (Globals.gIsAlive[ix] == 1)
+            {
+                Globals.gVideoList[ix].Read(Globals.gFrame[ix]);
+                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[ix]), ix);
+            }
+            Globals.gVideoList[ix].Release();
+            Globals.gFrame[ix].Release();
+
+            Globals.gVideoList[ix] = null;
         }
+
         private void CameraCallback1()
         {
-            Globals.gFrame[1] = new Mat();
-            Globals.gVideoList[1] = new VideoCapture(1, VideoCaptureAPIs.DSHOW);
+            int ix = 1;
+            Globals.gFrame[ix] = new Mat();
+            Globals.gVideoList[ix] = new VideoCapture(ix, VideoCaptureAPIs.DSHOW);
 
-            while (true)
+            if (!Globals.gVideoList[ix].IsOpened())
             {
-                Globals.gVideoList[1].Read(Globals.gFrame[1]);
-                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[1]), 1);
-
+                MessageBox.Show("두번째 카메라를 열 수 없습니다. 연결 확인해 주세요");
+                return;
             }
+
+            Globals.gIsAlive[ix] = 1;
+            while (Globals.gIsAlive[ix] == 1)
+            {
+                Globals.gVideoList[ix].Read(Globals.gFrame[ix]);
+                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[ix]), ix);
+            }
+            Globals.gVideoList[ix].Release();
+            Globals.gFrame[ix].Release();
+
+            Globals.gVideoList[ix] = null;
         }
 
         private void CameraCallback2()
         {
-            Globals.gFrame[2] = new Mat();
-            Globals.gVideoList[2] = new VideoCapture(2, VideoCaptureAPIs.DSHOW);
+            int ix = 2;
+            Globals.gFrame[ix] = new Mat();
+            Globals.gVideoList[ix] = new VideoCapture(ix, VideoCaptureAPIs.DSHOW);
 
-            while (true)
+            if (!Globals.gVideoList[ix].IsOpened())
             {
-                Globals.gVideoList[2].Read(Globals.gFrame[2]);
-                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[2]), 2);
+                MessageBox.Show("세번째 카메라를 열 수 없습니다. 연결 확인해 주세요");
+                return;
             }
+
+            Globals.gIsAlive[ix] = 1;
+            while (Globals.gIsAlive[ix] == 1)
+            {
+                Globals.gVideoList[ix].Read(Globals.gFrame[ix]);
+                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[ix]), ix);
+            }
+            Globals.gVideoList[ix].Release();
+            Globals.gFrame[ix].Release();
+
+            Globals.gVideoList[ix] = null;
         }
 
         private void CameraCallback3()
         {
-            Globals.gFrame[3] = new Mat();
-            Globals.gVideoList[3] = new VideoCapture(3, VideoCaptureAPIs.DSHOW);
+            int ix = 3;
+            Globals.gFrame[ix] = new Mat();
+            Globals.gVideoList[ix] = new VideoCapture(ix, VideoCaptureAPIs.DSHOW);
 
-            while (true)
+            if (!Globals.gVideoList[ix].IsOpened())
             {
-                Globals.gVideoList[3].Read(Globals.gFrame[3]);
-                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[3]), 3);
+                MessageBox.Show("네번째 카메라를 열 수 없습니다. 연결 확인해 주세요");
+                return;
             }
+
+            Globals.gIsAlive[ix] = 1;
+            while (Globals.gIsAlive[ix] == 1)
+            {
+                Globals.gVideoList[ix].Read(Globals.gFrame[ix]);
+                ShowImage(OpenCvSharp.Extensions.BitmapConverter.ToBitmap(Globals.gFrame[ix]), ix);
+            }
+            Globals.gVideoList[ix].Release();
+            Globals.gFrame[ix].Release();
+
+            Globals.gVideoList[ix] = null;
+        }
+
+        private void StartCamera(int index)
+        {
+
+            if (index == 0)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback0));
+            else if (index == 1)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback1));
+            else if (index == 2)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback2));
+            else if (index == 3)
+                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback3));
+            else
+                return;
+
+            Globals.gThread[index].Start();
+            CameraButton[index].Text = "Stop";
+        }
+
+        private void StopCamera(int index)
+        {
+            if (Globals.gIsAlive[index] == 0)
+                return;
+            Globals.gIsAlive[index] = 0;
+            Globals.gThread[index].Join();
+            CameraButton[index].Text = "Start";
         }
 
         private void btnCam1_Click(object sender, EventArgs e)
         {
             if (Globals.gVideoList[0] != null)
             {
-                Globals.gThread[0].Abort();
-                Globals.gVideoList[0].Release();
-                Globals.gFrame[0].Release();
+                StopCamera(0);
                 return;
             }
 
-            btnCam1.Text = "Stop1";
-            Globals.gThread[0] = new Thread(new ThreadStart(CameraCallback0));
-            Globals.gThread[0].Start();
-
+            StartCamera(0);
         }
 
         private void btnCam2_Click(object sender, EventArgs e)
         {
             if (Globals.gVideoList[1] != null)
             {
-                Globals.gThread[1].Abort();
-                Globals.gVideoList[1].Release();
-                Globals.gFrame[1].Release();
+                StopCamera(1);
                 return;
             }
 
-            btnCam2.Text = "Stop2";
-            Globals.gThread[1] = new Thread(new ThreadStart(CameraCallback1));
-            Globals.gThread[1].Start();
-
+            StartCamera(1);
         }
 
         private void btnCam3_Click(object sender, EventArgs e)
@@ -147,36 +213,23 @@ namespace PSSystem
             StartCamera(3);
         }
 
-        private void StartCamera(int index)
-        {
-
-            if (index == 0)
-                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback0));
-            else if (index == 1)
-                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback1));
-            else if (index == 2)
-                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback2));
-            else if (index == 3)
-                Globals.gThread[index] = new Thread(new ThreadStart(CameraCallback3));
-            else
-                return;
-
-            Globals.gThread[index].Start();
-            CameraButton[index].Text = "Stop";
-        }
-
-        private void StopCamera(int index)
-        {
-            Globals.gThread[index].Abort();
-            Globals.gVideoList[index].Release();
-            Globals.gFrame[index].Release();
-            CameraButton[index].Text = "Start";
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             if (Globals.gCurrentIndex != (int)FORM_INDEX.NO_FORM_MAIN)
                 Globals.ChangeForm((int)FORM_INDEX.NO_FORM_MAIN);
+        }
+
+        private void FormSetVideo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            for (int i = 0; i < Globals.MAX_CAMERA; i++)
+                StopCamera(i);
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            CurrentCam = (CurrentCam + 1) % Globals.gNumCam;
+            StopCamera((CurrentCam + Globals.gNumCam - 1) % Globals.gNumCam);
+            StartCamera(CurrentCam);
         }
     }
 }

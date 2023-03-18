@@ -38,6 +38,7 @@
             btnCam4 = new Button();
             label1 = new Label();
             btnHome = new Button();
+            btnNext = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -141,11 +142,22 @@
             btnHome.UseVisualStyleBackColor = true;
             btnHome.Click += btnHome_Click;
             // 
+            // btnNext
+            // 
+            btnNext.Location = new Point(94, 370);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(75, 23);
+            btnNext.TabIndex = 16;
+            btnNext.Text = "Next  Cam";
+            btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
+            // 
             // FormSetVideo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 416);
+            Controls.Add(btnNext);
             Controls.Add(btnHome);
             Controls.Add(label1);
             Controls.Add(btnCam4);
@@ -159,6 +171,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormSetVideo";
             Text = "FormD2";
+            FormClosed += FormSetVideo_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -179,5 +192,6 @@
         private Button btnCam4;
         private Label label1;
         private Button btnHome;
+        private Button btnNext;
     }
 }

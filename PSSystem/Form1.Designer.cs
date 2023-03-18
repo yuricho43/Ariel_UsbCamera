@@ -130,6 +130,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PSSystem";
+            FormClosing += Form1_FormClosing;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
