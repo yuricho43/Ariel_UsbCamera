@@ -36,12 +36,14 @@
             btnMenu = new Button();
             panelMiddle = new Panel();
             timerTime = new System.Windows.Forms.Timer(components);
+            lblTest = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.HighlightText;
+            panel1.Controls.Add(lblTest);
             panel1.Controls.Add(lblModelName);
             panel1.Controls.Add(lblDate);
             panel1.Controls.Add(label1);
@@ -93,9 +95,9 @@
             // 
             // btnMenu
             // 
-            btnMenu.Location = new Point(323, 12);
+            btnMenu.Location = new Point(405, 12);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(125, 37);
+            btnMenu.Size = new Size(79, 37);
             btnMenu.TabIndex = 0;
             btnMenu.Text = "설정";
             btnMenu.UseVisualStyleBackColor = true;
@@ -116,6 +118,15 @@
             timerTime.Enabled = true;
             timerTime.Interval = 1000;
             timerTime.Tick += timerTime_Tick;
+            // 
+            // lblTest
+            // 
+            lblTest.AutoSize = true;
+            lblTest.Location = new Point(239, 16);
+            lblTest.Name = "lblTest";
+            lblTest.Size = new Size(39, 15);
+            lblTest.TabIndex = 12;
+            lblTest.Text = "label2";
             // 
             // Form1
             // 
@@ -145,5 +156,6 @@
         private Label label1;
         private Label lblModelName;
         private System.Windows.Forms.Timer timerTime;
+        private Label lblTest;
     }
 }

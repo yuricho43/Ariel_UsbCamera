@@ -22,6 +22,8 @@ namespace PSSystem
         public FormSetVideo()
         {
             InitializeComponent();
+            label1.BackColor = Color.Transparent;
+
             CameraButton[0] = btnCam1;
             CameraButton[1] = btnCam2;
             CameraButton[2] = btnCam3;

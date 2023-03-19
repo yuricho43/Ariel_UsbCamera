@@ -127,6 +127,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Narrow", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(12, 362);
             label1.Name = "label1";
             label1.Size = new Size(113, 37);
@@ -157,9 +158,9 @@
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(4, 9);
+            pictureBox5.Location = new Point(80, 9);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(792, 347);
+            pictureBox5.Size = new Size(639, 347);
             pictureBox5.TabIndex = 17;
             pictureBox5.TabStop = false;
             // 

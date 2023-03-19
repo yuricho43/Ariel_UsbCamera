@@ -1,7 +1,9 @@
 using GitHub.secile.Video;
 using OpenCvSharp;
 using OpenCvSharp.Extensions;
+using System.Configuration;
 using System.DirectoryServices;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PSSystem
@@ -35,6 +37,8 @@ namespace PSSystem
         public Form1()
         {
             InitializeComponent();
+            Read_Configuration();
+
             Globals.gCurrentIndex = 0;
             Globals.gFormList[(int)FORM_INDEX.NO_FORM_LOGO] = new FormLogo();
             Globals.gFormList[(int)FORM_INDEX.NO_FORM_MAIN] = new FormMain();
@@ -66,8 +70,40 @@ namespace PSSystem
             label1.BackColor = Color.Transparent;
             lblDate.BackColor = Color.Transparent;
             btnMenu.BackColor = Color.Transparent;
+
+            string oneTimeKeywordFilePath = ConfigurationManager.AppSettings["OneTimeKeyword"];
+            lblTest.Text = oneTimeKeywordFilePath;
         }
 
+        private void Read_Configuration()
+        {
+            // read configuration : 
+            string strNames = Globals.GetSetting("ChannelName");
+            string strWarning = Globals.GetSetting("WarningThreshold");
+            string strCritical = Globals.GetSetting("CriticalThreshold");
+            string strNumSensor = Globals.GetSetting("NumberOfSensor");
+            string strWifi = Globals.GetSetting("WifiValue");
+
+            if (strNames == null)
+                strNames = "ID001,ID002,ID003,ID004";           
+            Globals.gCamName = strNames.Split(',').ToArray<string>();
+
+            if (strWarning == null)
+                strWarning = "59, 59, 110";
+            Globals.gWarningThreshold = strWarning.Split(',').Select(x => int.Parse(x)).ToArray();
+
+            if (strCritical == null)
+                strCritical = "95, 95, 120";
+            Globals.gCriticalThreshold = strCritical.Split(',').Select(x => int.Parse(x)).ToArray();
+
+            if (strNumSensor == null)
+                strNumSensor = "4";
+            Globals.gNumSensor = int.Parse(strNumSensor);
+
+            if (strWifi == null)
+                strWifi = "WIFI-SSD,WIFI-PASS";
+            Globals.gWifi = strWifi.Split(',').ToArray<string>();
+        }
 
         public void ShowTopMenu()
         {
@@ -104,6 +140,7 @@ namespace PSSystem
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Globals.gFormList[(int)FORM_INDEX.NO_FORM_SET_VIDEO].Close();
+            Globals.Write_Configuration();
         }
     }
 }

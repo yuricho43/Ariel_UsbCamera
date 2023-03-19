@@ -2,14 +2,17 @@
 using OpenCvSharp;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PSSystem
 {
+
     public static class Globals
     {
+        //--- housekeeping variables
         public const int MAX_COUNT = 13;
         public const int MAX_CAMERA = 4;
         public static int gCurrentIndex = 0;
@@ -23,6 +26,13 @@ namespace PSSystem
         public static string[] gDevices = UsbCamera.FindDevices();
         public static int gNumCam = 0;
 
+        //--- configuration
+        public static string[] gCamName = new string[MAX_CAMERA];
+        public static int[] gWarningThreshold = new int[5];
+        public static int[] gCriticalThreshold = new int[5];
+        public static int gNumSensor;
+        public static string[] gWifi = new string[3];   // SSID, PASS
+
         public static void ChangeForm(int index)
         {
             Globals.gFormList[index].Show();
@@ -30,6 +40,33 @@ namespace PSSystem
             Globals.gCurrentIndex = index;
         }
 
+        public static string GetSetting(string key)
+        {
+            return ConfigurationManager.AppSettings[key];
+        }
+
+        public static void SetSetting(string key, string value)
+        {
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings[key].Value = value;
+            configuration.Save(ConfigurationSaveMode.Full, true);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        public static void Write_Configuration()
+        {
+            //camname, waringins, criticals, numsensors, wifi
+            string strNames = String.Join(",", gCamName);
+            string strWarning = String.Join(",", gWarningThreshold);
+            string strCritical = String.Join(",", gCriticalThreshold);
+            string strWifi = String.Join(",", gWifi);
+
+            SetSetting("ChannelName", strNames);
+            SetSetting("WarningThreshold", strWarning);
+            SetSetting("CriticalThreshold", strCritical);
+            SetSetting("NumberOfSensor", gNumSensor.ToString());
+            SetSetting("WifiValue", strWifi);
+        }
 
     }
 }
